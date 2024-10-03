@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_shared_property_characteristics",
+  "info": {
+    "displayName": "propertyCharacteristics",
+    "icon": "attachment"
+  },
+  "options": {},
+  "attributes": {
+    "rooms": {
+      "type": "integer"
+    },
+    "sqMts": {
+      "type": "decimal"
+    },
+    "bathrooms": {
+      "type": "integer"
+    },
+    "elevator": {
+      "type": "boolean"
+    },
+    "pool": {
+      "type": "boolean"
+    },
+    "vigilanceSystem": {
+      "type": "boolean"
+    }
+  }
+}

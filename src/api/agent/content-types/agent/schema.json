@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "agents",
+  "info": {
+    "singularName": "agent",
+    "pluralName": "agents",
+    "displayName": "Agent",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "agentLicenseNumber": {
+      "type": "string"
+    },
+    "firstName": {
+      "type": "string"
+    },
+    "lastName": {
+      "type": "string"
+    },
+    "agency": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::agency.agency"
+    },
+    "location": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.location"
+    },
+    "contact": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.contact"
+    }
+  }
+}
