@@ -36,7 +36,7 @@ export interface Property {
     createdAt: Date;    updatedAt: Date;    publishedAt?: Date;    location?: Location;
     catastroId?: string;
     media?: { data: Media[] };
-    characteristics?: PropertyCharacteristics;
+    features?: PropertyCharacteristics;
     propertyStatus?: PropertyStatus;
     listedPrice?: number;
     registrationId: string;
@@ -50,7 +50,7 @@ export interface Property_Plain {
   createdAt: Date;  updatedAt: Date;  publishedAt?: Date;  location?: Location_Plain;
   catastroId?: string;
   media?: Media_Plain[];
-  characteristics?: PropertyCharacteristics_Plain;
+  features?: PropertyCharacteristics_Plain;
   propertyStatus?: PropertyStatus;
   listedPrice?: number;
   registrationId: string;
@@ -64,7 +64,7 @@ export interface Property_NoRelations {
   createdAt: Date;  updatedAt: Date;  publishedAt?: Date;  location?: Location_NoRelations;
   catastroId?: string;
   media?: number[];
-  characteristics?: PropertyCharacteristics_NoRelations;
+  features?: PropertyCharacteristics_NoRelations;
   propertyStatus?: PropertyStatus;
   listedPrice?: number;
   registrationId: string;
@@ -78,7 +78,7 @@ export interface Property_AdminPanelLifeCycle {
   createdAt: Date;  updatedAt: Date;  publishedAt?: Date;  location?: Location_Plain;
   catastroId?: string;
   media?: AdminPanelRelationPropertyModification<Media_Plain>[];
-  characteristics?: PropertyCharacteristics_Plain;
+  features?: PropertyCharacteristics_Plain;
   propertyStatus?: PropertyStatus;
   listedPrice?: number;
   registrationId: string;

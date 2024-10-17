@@ -54,7 +54,7 @@ export interface SharedQuote extends Struct.ComponentSchema {
 export interface SharedPropertyCharacteristics extends Struct.ComponentSchema {
   collectionName: 'components_shared_property_characteristics';
   info: {
-    displayName: 'propertyCharacteristics';
+    displayName: 'Features';
     icon: 'attachment';
     description: '';
   };

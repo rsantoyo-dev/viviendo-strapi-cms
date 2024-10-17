@@ -31,7 +31,7 @@
         "audios"
       ]
     },
-    "characteristics": {
+    "features": {
       "displayName": "propertyCharacteristics",
       "type": "component",
       "repeatable": false,

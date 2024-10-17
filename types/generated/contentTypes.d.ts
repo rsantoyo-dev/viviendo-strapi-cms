@@ -715,7 +715,7 @@ export interface ApiPropertyProperty extends Struct.CollectionTypeSchema {
       'images' | 'files' | 'videos' | 'audios',
       true
     >;
-    characteristics: Schema.Attribute.Component<
+    features: Schema.Attribute.Component<
       'shared.property-characteristics',
       false
     >;
