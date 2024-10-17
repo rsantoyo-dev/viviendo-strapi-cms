@@ -33,6 +33,12 @@
     },
     "city": {
       "type": "string"
+    },
+    "neighborhood": {
+      "type": "string"
+    },
+    "borough": {
+      "type": "string"
     }
   }
 }

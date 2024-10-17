@@ -1,0 +1,37 @@
+{
+  "collectionName": "components_shared_buildings",
+  "info": {
+    "displayName": "building",
+    "icon": "manyToMany"
+  },
+  "options": {},
+  "attributes": {
+    "livingArea": {
+      "type": "decimal"
+    },
+    "newConstruction": {
+      "type": "boolean"
+    },
+    "bungalow": {
+      "type": "boolean"
+    },
+    "splitLevel": {
+      "type": "boolean"
+    },
+    "semiDetached": {
+      "type": "boolean"
+    },
+    "century": {
+      "type": "boolean"
+    },
+    "detached": {
+      "type": "boolean"
+    },
+    "attached": {
+      "type": "boolean"
+    },
+    "buildYear": {
+      "type": "integer"
+    }
+  }
+}

@@ -703,6 +703,7 @@ export interface ApiPropertyProperty extends Struct.CollectionTypeSchema {
     singularName: 'property';
     pluralName: 'properties';
     displayName: 'Property';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -718,6 +719,27 @@ export interface ApiPropertyProperty extends Struct.CollectionTypeSchema {
       'shared.property-characteristics',
       false
     >;
+    propertyStatus: Schema.Attribute.Enumeration<
+      ['forSale', 'forRent', 'onHold', 'Rented', 'Sold']
+    >;
+    listedPrice: Schema.Attribute.Decimal;
+    registrationId: Schema.Attribute.String & Schema.Attribute.Required;
+    test: Schema.Attribute.String;
+    propertyType: Schema.Attribute.Enumeration<
+      [
+        'singleFamilyHome',
+        'condo',
+        'loft',
+        'plex',
+        'intergeneration',
+        'mobileHome',
+        'farm',
+        'cottage',
+        'land',
+      ]
+    > &
+      Schema.Attribute.DefaultTo<'singleFamilyHome'>;
+    building: Schema.Attribute.Component<'shared.building', false>;
     createdAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     publishedAt: Schema.Attribute.DateTime;

@@ -56,6 +56,7 @@ export interface SharedPropertyCharacteristics extends Struct.ComponentSchema {
   info: {
     displayName: 'propertyCharacteristics';
     icon: 'attachment';
+    description: '';
   };
   attributes: {
     rooms: Schema.Attribute.Integer;
@@ -64,6 +65,12 @@ export interface SharedPropertyCharacteristics extends Struct.ComponentSchema {
     elevator: Schema.Attribute.Boolean;
     pool: Schema.Attribute.Boolean;
     vigilanceSystem: Schema.Attribute.Boolean;
+    indoorParking: Schema.Attribute.Integer;
+    outdoorParking: Schema.Attribute.Integer;
+    reducedMobility: Schema.Attribute.Boolean;
+    waterFront: Schema.Attribute.Boolean;
+    waterAccess: Schema.Attribute.Boolean;
+    petsFriendly: Schema.Attribute.Boolean;
   };
 }
 
@@ -95,6 +102,8 @@ export interface SharedLocation extends Struct.ComponentSchema {
     civicName: Schema.Attribute.String;
     address: Schema.Attribute.String;
     city: Schema.Attribute.String;
+    neighborhood: Schema.Attribute.String;
+    borough: Schema.Attribute.String;
   };
 }
 
@@ -127,6 +136,25 @@ export interface SharedContact extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedBuilding extends Struct.ComponentSchema {
+  collectionName: 'components_shared_buildings';
+  info: {
+    displayName: 'building';
+    icon: 'manyToMany';
+  };
+  attributes: {
+    livingArea: Schema.Attribute.Decimal;
+    newConstruction: Schema.Attribute.Boolean;
+    bungalow: Schema.Attribute.Boolean;
+    splitLevel: Schema.Attribute.Boolean;
+    semiDetached: Schema.Attribute.Boolean;
+    century: Schema.Attribute.Boolean;
+    detached: Schema.Attribute.Boolean;
+    attached: Schema.Attribute.Boolean;
+    buildYear: Schema.Attribute.Integer;
+  };
+}
+
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
@@ -139,6 +167,7 @@ declare module '@strapi/strapi' {
       'shared.location': SharedLocation;
       'shared.entity': SharedEntity;
       'shared.contact': SharedContact;
+      'shared.building': SharedBuilding;
     }
   }
 }

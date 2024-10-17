@@ -4,7 +4,8 @@
   "info": {
     "singularName": "property",
     "pluralName": "properties",
-    "displayName": "Property"
+    "displayName": "Property",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -20,20 +21,62 @@
       "type": "string"
     },
     "media": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": true
+      ]
     },
     "characteristics": {
       "displayName": "propertyCharacteristics",
       "type": "component",
       "repeatable": false,
       "component": "shared.property-characteristics"
+    },
+    "propertyStatus": {
+      "type": "enumeration",
+      "enum": [
+        "forSale",
+        "forRent",
+        "onHold",
+        "Rented",
+        "Sold"
+      ]
+    },
+    "listedPrice": {
+      "type": "decimal"
+    },
+    "registrationId": {
+      "type": "string",
+      "required": true
+    },
+    "test": {
+      "type": "string"
+    },
+    "propertyType": {
+      "type": "enumeration",
+      "enum": [
+        "singleFamilyHome",
+        "condo",
+        "loft",
+        "plex",
+        "intergeneration",
+        "mobileHome",
+        "farm",
+        "cottage",
+        "land"
+      ],
+      "default": "singleFamilyHome"
+    },
+    "building": {
+      "displayName": "building",
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.building"
     }
   }
 }

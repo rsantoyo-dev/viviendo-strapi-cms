@@ -16,5 +16,14 @@
         "**/.settings": true,
         "**/.exchange_modules_tmp": true,
         ".mule": true
-    }
+    },
+    "sqltools.useNodeRuntime": true,
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "driver": "SQLite",
+            "database": "${workspaceFolder:viviendo-strapi-cms}/.tmp/data.db",
+            "name": "tmp"
+        }
+    ]
 }
