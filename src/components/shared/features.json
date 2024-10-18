@@ -1,0 +1,42 @@
+{
+  "collectionName": "components_shared_features",
+  "info": {
+    "displayName": "Features"
+  },
+  "options": {},
+  "attributes": {
+    "bedrooms": {
+      "type": "integer"
+    },
+    "bathrooms": {
+      "type": "integer"
+    },
+    "parking": {
+      "type": "integer"
+    },
+    "garages": {
+      "type": "integer"
+    },
+    "pool": {
+      "type": "boolean"
+    },
+    "reducedMobility": {
+      "type": "boolean"
+    },
+    "waterfront": {
+      "type": "boolean"
+    },
+    "smokingAllowed": {
+      "type": "boolean"
+    },
+    "elevator": {
+      "type": "boolean"
+    },
+    "waterAccess": {
+      "type": "boolean"
+    },
+    "petsAllowed": {
+      "type": "boolean"
+    }
+  }
+}

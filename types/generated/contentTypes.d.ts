@@ -715,10 +715,6 @@ export interface ApiPropertyProperty extends Struct.CollectionTypeSchema {
       'images' | 'files' | 'videos' | 'audios',
       true
     >;
-    features: Schema.Attribute.Component<
-      'shared.property-characteristics',
-      false
-    >;
     propertyStatus: Schema.Attribute.Enumeration<
       ['forSale', 'forRent', 'onHold', 'Rented', 'Sold']
     >;
@@ -740,6 +736,7 @@ export interface ApiPropertyProperty extends Struct.CollectionTypeSchema {
     > &
       Schema.Attribute.DefaultTo<'singleFamilyHome'>;
     building: Schema.Attribute.Component<'shared.building', false>;
+    features: Schema.Attribute.Component<'shared.features', false>;
     createdAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     publishedAt: Schema.Attribute.DateTime;

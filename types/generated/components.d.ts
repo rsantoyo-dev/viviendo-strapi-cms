@@ -51,29 +51,6 @@ export interface SharedQuote extends Struct.ComponentSchema {
   };
 }
 
-export interface SharedPropertyCharacteristics extends Struct.ComponentSchema {
-  collectionName: 'components_shared_property_characteristics';
-  info: {
-    displayName: 'Features';
-    icon: 'attachment';
-    description: '';
-  };
-  attributes: {
-    rooms: Schema.Attribute.Integer;
-    sqMts: Schema.Attribute.Decimal;
-    bathrooms: Schema.Attribute.Integer;
-    elevator: Schema.Attribute.Boolean;
-    pool: Schema.Attribute.Boolean;
-    vigilanceSystem: Schema.Attribute.Boolean;
-    indoorParking: Schema.Attribute.Integer;
-    outdoorParking: Schema.Attribute.Integer;
-    reducedMobility: Schema.Attribute.Boolean;
-    waterFront: Schema.Attribute.Boolean;
-    waterAccess: Schema.Attribute.Boolean;
-    petsFriendly: Schema.Attribute.Boolean;
-  };
-}
-
 export interface SharedMedia extends Struct.ComponentSchema {
   collectionName: 'components_shared_media';
   info: {
@@ -104,6 +81,26 @@ export interface SharedLocation extends Struct.ComponentSchema {
     city: Schema.Attribute.String;
     neighborhood: Schema.Attribute.String;
     borough: Schema.Attribute.String;
+  };
+}
+
+export interface SharedFeatures extends Struct.ComponentSchema {
+  collectionName: 'components_shared_features';
+  info: {
+    displayName: 'Features';
+  };
+  attributes: {
+    bedrooms: Schema.Attribute.Integer;
+    bathrooms: Schema.Attribute.Integer;
+    parking: Schema.Attribute.Integer;
+    garages: Schema.Attribute.Integer;
+    pool: Schema.Attribute.Boolean;
+    reducedMobility: Schema.Attribute.Boolean;
+    waterfront: Schema.Attribute.Boolean;
+    smokingAllowed: Schema.Attribute.Boolean;
+    elevator: Schema.Attribute.Boolean;
+    waterAccess: Schema.Attribute.Boolean;
+    petsAllowed: Schema.Attribute.Boolean;
   };
 }
 
@@ -162,9 +159,9 @@ declare module '@strapi/strapi' {
       'shared.seo': SharedSeo;
       'shared.rich-text': SharedRichText;
       'shared.quote': SharedQuote;
-      'shared.property-characteristics': SharedPropertyCharacteristics;
       'shared.media': SharedMedia;
       'shared.location': SharedLocation;
+      'shared.features': SharedFeatures;
       'shared.entity': SharedEntity;
       'shared.contact': SharedContact;
       'shared.building': SharedBuilding;

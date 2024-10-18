@@ -31,12 +31,6 @@
         "audios"
       ]
     },
-    "features": {
-      "displayName": "propertyCharacteristics",
-      "type": "component",
-      "repeatable": false,
-      "component": "shared.property-characteristics"
-    },
     "propertyStatus": {
       "type": "enumeration",
       "enum": [
@@ -77,6 +71,11 @@
       "type": "component",
       "repeatable": false,
       "component": "shared.building"
+    },
+    "features": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.features"
     }
   }
 }
